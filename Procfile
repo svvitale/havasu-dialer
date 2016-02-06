@@ -1,1 +1,1 @@
-web: gunicorn tenderbelly.wsgi --log-file -
+web: gunicorn havasu.wsgi --log-file -
