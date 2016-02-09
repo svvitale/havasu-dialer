@@ -25,7 +25,7 @@ class TwilioView(View):
         response = """<?xml version="1.0" encoding="UTF-8"?>
 <Response>
     <Say>Hi! We are going to connect you to... Kate Vitale</Say>
-    <Dial>+17202886336</Dial>
+    <Dial>+13038425418</Dial>
 </Response>"""
         return HttpResponse(response, content_type='text/xml')
 
