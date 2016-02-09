@@ -31,6 +31,7 @@ class TwilioView(View):
 
     def post(self, request):
 
+        print("Call to %s is %s" % (request.POST['To'], request.POST['CallStatus']))
         call = Call.objects.get(call_id=request.POST['CallSid'])
         call.status = request.POST['CallStatus']
         call.in_progress = call.status in TwilioView.CALL_IN_PROGRESS_STATUS
