@@ -10,3 +10,7 @@ class TwilioView(View):
     <Dial>+13038425418</Dial>
 </Response>"""
         return HttpResponse(response, content_type='text/xml')
+
+    def post(self, request):
+        print(request.body)
+        return HttpResponse()

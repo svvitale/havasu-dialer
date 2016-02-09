@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'havasu'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -72,13 +73,8 @@ WSGI_APPLICATION = 'havasu.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+import dj_database_url  # nopep8
+DATABASES = {'default': dj_database_url.config(default='postgres://mbxyzjcaighdxy:N_D5eVp0jGnvEjzUMb8Wua5Ax8@ec2-54-225-199-245.compute-1.amazonaws.com:5432/d96m6avnsppdb9')}
 
 
 # Password validation
