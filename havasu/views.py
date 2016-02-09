@@ -12,6 +12,6 @@ class TwilioView(View):
         return HttpResponse(response, content_type='text/xml')
 
     def post(self, request):
-        for key, val in request.POST:
+        for key, val in request.POST.items():
             print('%s = %s' % (key, val))
         return HttpResponse()
